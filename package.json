@@ -1,4 +1,13 @@
 {
   "name": "enablement-engineer",
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "workspaces": [
+    "apps/*"
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "front": "yarn workspace front",
+    "contracts": "yarn workspace contracts"
+  }
 }
