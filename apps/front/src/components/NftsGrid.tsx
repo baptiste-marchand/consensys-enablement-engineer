@@ -48,7 +48,7 @@ const NFTsGrid: React.FC<NFTsGridProps> = ({ nfts, loading }) => {
     <SimpleGrid columns={{ sm: 2, md: 3, lg: 4 }} spacing={10}>
       {nftsWithImage.map((nft) => (
         <Box key={nft.id.toString()} boxShadow="md" p="5" rounded="md" bg="white">
-          <Image src={nft.image?.replace('ipfs://', 'https://ipfs.io/ipfs/')} alt={nft.collectionName} borderRadius="md" />
+          <Image src={nft.image} alt={nft.collectionName} borderRadius="md" />
           <Text mt="2" fontSize="lg" fontWeight="semibold" align="center">
             {nft.collectionName} #{nft.id.toString()}
           </Text>
